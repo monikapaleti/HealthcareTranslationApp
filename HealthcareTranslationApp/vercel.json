@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/index.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "src": "/static/(.*)", "dest": "/staticfiles/$1" },
+      {
+        "src": "/(.*)",
+        "dest": "api/index.py"
+      }
+    ],
+    "env": {
+        "DJANGO_SECRET_KEY": "((1k9hts9&m(#_v)7am5673*b(jw8-9y48s8r_#qo954#5g9wt",
+        "DJANGO_SETTINGS_MODULE" : "HealthcareTranslationApp.settings"
+      }
+}
+  
